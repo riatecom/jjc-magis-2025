@@ -1,0 +1,290 @@
+---
+title: "Méthodes et outils au RIATE : Transmission grâce à la science ouverte"
+author:
+  name: "Matthieu Viry (CNRS - UAR 2414 RIATE)"
+  email: "matthieu.viry@cnrs.fr"
+subtitle: "26 Nov. 2025 - Journées Jeunes Chercheur·es du GdR MAGIS"
+format:
+  revealjs:
+    theme: simple
+    embed-resources: false
+    logo: images/logos-footer.png
+    width: 1150
+    height: 740
+#title-slide-attributes:
+#  data-background-image: images/cartouche_baseline_black@4x.png
+#  data-background-size: 50%
+#  data-background-position: 50% 20%
+execute:
+  cache: true
+css: ['static/style.css']
+prefer-html: true
+lang: fr
+---
+
+## Présentation rapide du RIATE 🎯
+
+:::{.center}
+![](./images/riate-cartouche_baseline_red.jpg){.w300}
+:::
+
+Une petite équipe :
+
+- 1 directeur (PR Univ. Paris Cité)
+
+- 5 ingénieur·es permanent·es (CNRS et Univ. Paris Cité)
+
+- 2 ingénieurs en CDD (+ stagiaires)
+
+<br />
+
+Une **_Unité d'Appui à la Recherche_**
+
+
+## Le RIATE en quelques dates
+
+- Unité **créée en 2002** sous la cotutelle du **CNRS**,
+  de la Délégation à l’Aménagement du Territoire et l’Action Régionale (**DATAR**) et de l’**Université Paris 7 - Denis Diderot**
+
+- Initialement un **rôle de coordination pour le lancement des projets de recherche du programme ESPON**
+
+- **2019-2020** : retrait du CGET (ex-DATAR) des tutelles de l'unité, fin du rôle de Point de Contact National du programme ESPON
+  et **recentrage des missions du RIATE vers la production et la diffusion de méthodes et d’outils en géographie quantitative**
+
+- **2024** : Renommage en **RIATE - Centre pour l’analyse spatiale et la géovisualisation**
+
+## Objectifs du RIATE
+
+<br />
+
+:::{.center}
+__*Le RIATE, une UAR avec la transmission au cœur de ses missions*__
+:::
+
+<br />
+
+Mission 1 : **Développement de méthodes et d’outils en géographie quantitative**
+
+<br />
+
+Mission 2 : **Diffusion et partage des savoir-faire et des connaissances**
+
+<br />
+
+Mission 3 : **Partenariats scientifiques**
+
+
+## La science ouverte au RIATE
+
+- **Participation à des projets de recherche** en mettant en œuvre des protocoles permettant la **reproductibilité** des recherches
+  (c'est le cas sur l'ensemble des projets de recherche conduits par le RIATE)
+
+<br />
+
+- **Développement et diffusion d’outils libres et open source** (l'intégralité des outils développés par le RIATE est
+  diffusée sous licence libre — principalement licence MIT ou licence GPL v3)
+
+<br />
+
+- **Diffusion de savoir-faire et de connaissances** (supports de formation, tutoriels, etc.)
+
+## Projets de recherche : Méthodes pour une production scientifique ouverte
+
+Mise en œuvre des méthodes de la recherche reproductible :
+
+- **Gestion de versions** (Git, GitHub, GitLab, etc.)
+
+- **Automatisation des analyses** (scripts, notebooks, etc.)
+
+- **Documentation des analyses** (littératie des données, métadonnées, etc.)
+
+- **Partage des données** (dépôts de données et des codes, licences ouvertes, etc.)
+
+
+## Projets de recherche : Diffusion des résultats
+
+:::: {.columns}
+
+::: {.column .center width="50%"}
+
+![](./images/image152.png)
+
+<small>Publication de jeux de données et codes sur Zenodo</small>
+
+:::
+
+
+::: {.column .center width="50%"}
+
+![](./images/notebook.png){.bordered}
+
+<small>Exemple de notebook accompagnant un jeu de données</small>
+
+:::
+
+::::
+
+
+
+## Projets de recherche : Diffusion des résultats
+
+:::{.center}
+
+![](./images/datapaper2.png)
+
+<small><em>Data paper</em></small>
+
+:::
+
+## Projets de recherche : Diffusion des résultats
+
+:::{.center}
+
+![](./images/site-airbnb.png){.bordered .w800}
+
+<small>Au-delà des publications scientifiques, via sites Web dédiés par exemple</small>
+
+:::
+
+## Développement d'outils
+
+<br />
+
+**_Riatelab_** : l'activité de développement d'outils open source du RIATE
+
+<br />
+
+Des développements guidés par :
+
+- la volonté de diffusion des méthodes de cartographie utilisées par le RIATE
+- les besoins des projets de recherche auxquels participent des membres du RIATE
+
+## Développement d'outils : packages R
+
+:::{.center}
+![](./images/logos-r.png){.w900}
+:::
+
+## Développement d'outils : packages R
+
+- Des packages couvrant une large variété de sujets
+
+- Publiés sur le CRAN et/ou Runiverse (+ code source sur GitHub)
+
+- Des "vignettes" couvrant l'usage des packages, mais aussi des tâches
+  préalables parfois bloquantes pour certains utilisateurs (installation de moteur de recherche d'itinéraire
+  comme OSRM ou Valhalla, etc.)
+
+## Développement d'outils : packages R
+
+Exemple combinant plusieurs packages R développés par le RIATE
+
+- **Maposm** : récupération de couches extraites d'OpenStreetMap
+
+- **Valh** : calcul d'itinéraire (client pour l'API de Valhalla)
+
+- **Distanamo** : cartogramme de distance
+
+- **Mapsf** : cartographie
+
+:::{.center}
+![](./images/ex-multipackage-r.png){.w500}
+:::
+
+## Développement d'outils : bibliothèques JavaScript
+
+:::{.center}
+![](./images/logos-js.png){.w600}
+:::
+
+## Développement d'outils : bibliothèques JavaScript
+
+- Bibliothèques publiées sur npmjs.com (+ code source sur GitHub)
+
+- De nombreux notebooks et exemples d'utilisation sur la plateforme [Observable](https://observablehq.com/)
+
+:::{.center}
+![](./images/notebooks.png){.w800}
+:::
+
+## Développement d'outils : Magrit
+
+:::{.center}
+![](./images/magrit-cartouche_baseline_black.png){.w300}
+:::
+
+**Application Web de cartographie thématique**, développée au RIATE **depuis 2017** (le projet open source avec la plus
+longue durée de vie au RIATE)
+
+Utilisée pour l'**enseignement** et l'**apprentissage** de la cartographie, principalement à l'université
+
+## Développement d'outils : Magrit
+
+:::{.center}
+![](./images/magrit-maps.png){.w1000}
+:::
+
+## Développement d'outils : Varia
+
+<br />
+
+- Plugin QGIS, bibliothèques Rust ou Python, etc.
+
+- Contribution à des projets open source externes.
+
+- Et bien sûr, **des outils en cours de développement au sein de projets de recherche** 🕵️
+
+
+## Formations
+
+Formation à la science ouverte et aux bonnes pratiques de la recherche reproductible
+
+- École thématique [SIGR (Sciences de l'information géographique reproductibles)](https://sigr2020.sciencesconf.org/index.html) - 2023
+
+- École thématique [SO-SHS (Sciences ouvertes pour les SHS : scripts, codes et logiciels)](https://so-shs.gitpages.huma-num.fr/) - 2025
+
+:::{.center}
+![](./images/soshs-neon.jpg){.w600}
+:::
+
+## Formations
+
+- Formation aux outils RIATE :
+  - R 
+  - (Géo)Visualisation en JavaScript
+  - Magrit
+
+- **Contextes variés** : écoles doctorales, formations internes aux laboratoires, réseaux métier, etc.
+  (+ activité d'enseignement universitaire pour certains membres)
+
+- Diffusion du code permettant de produire les supports sous licence CC-BY-SA
+
+## Quel état de la diffusion réalisée par le RIATE ?
+
+Bénéfices du choix de **méthodes reproductibles** :
+
+- Des échanges facilités entre les chercheur·es et les ingénieur·es
+
+- Des résultats faciles à diffuser et à réutiliser
+
+- Une expertise reconnue en géographie quantitative et en conduite de projets
+
+:::{.center}
+![](./images/RDM_KIT_life_cycle.png){.w300}
+:::
+
+## Quel état de la diffusion réalisée par le RIATE ?
+
+Bénéfices du choix des **logiciels libres** :
+
+- Une **large diffusion des outils** (communauté d'utilisateurs internationale), des retours d'expérience et des rapports de bugs facilités
+
+- Des **usages au-delà de la communauté _recherche_** (enseignement secondaire, collectivités territoriales, associations, hobbyistes, etc.)
+
+:::{.center}
+![](./images/image438.png){.w600}
+:::
+
+## 
+
+Merci !

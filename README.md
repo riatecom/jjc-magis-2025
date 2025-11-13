@@ -1,0 +1,1 @@
+# Présentation pour les Journées Jeunes Chercheur·es du GdR MAGIS 
