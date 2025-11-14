@@ -1,5 +1,5 @@
 ---
-title: "Méthodes et outils au RIATE : Transmission grâce à la science ouverte"
+title: "Diffusion de méthodes et outils grâce à la science ouverte"
 author:
   name: "Matthieu Viry (CNRS - UAR 2414 RIATE)"
   email: "matthieu.viry@cnrs.fr"
@@ -11,10 +11,6 @@ format:
     logo: images/logos-footer.png
     width: 1150
     height: 740
-#title-slide-attributes:
-#  data-background-image: images/cartouche_baseline_black@4x.png
-#  data-background-size: 50%
-#  data-background-position: 50% 20%
 execute:
   cache: true
 css: ['static/style.css']
@@ -38,7 +34,7 @@ Une petite équipe :
 
 <br />
 
-Une **_Unité d'Appui à la Recherche_**
+Une **_Unité d'Appui et de Recherche_**
 
 
 ## Le RIATE en quelques dates
@@ -154,10 +150,22 @@ Mise en œuvre des méthodes de la recherche reproductible :
 
 <br />
 
+:::{.medium-small}
 Des développements guidés par :
 
 - la volonté de diffusion des méthodes de cartographie utilisées par le RIATE
 - les besoins des projets de recherche auxquels participent des membres du RIATE
+
+<br />
+
+Mise en œuvres **des bonnes pratiques de développement logiciel** (*versioning*, tests, documentation, etc.)
+
+<br />
+
+Inscription dans la **dynamique de valorisation des logiciels produits par/pour des organismes publics**
+(code.gouv.fr, SILL, Catalogue des logiciels libres de la recherche académique, etc.)
+
+:::
 
 ## Développement d'outils : packages R
 
@@ -167,9 +175,15 @@ Des développements guidés par :
 
 ## Développement d'outils : packages R
 
-- Des packages couvrant une large variété de sujets
+<br />
 
-- Publiés sur le CRAN et/ou Runiverse (+ code source sur GitHub)
+- Des packages couvrant une **large variété de sujets**
+
+<br />
+
+- **Publiés sur le CRAN et/ou Runiverse** (+ code source sur GitHub)
+
+<br />
 
 - Des "vignettes" couvrant l'usage des packages, mais aussi des tâches
   préalables parfois bloquantes pour certains utilisateurs (installation de moteur de recherche d'itinéraire
@@ -179,13 +193,13 @@ Des développements guidés par :
 
 Exemple combinant plusieurs packages R développés par le RIATE
 
-- **Maposm** : récupération de couches extraites d'OpenStreetMap
+- **maposm** : récupération de couches extraites d'OpenStreetMap
 
-- **Valh** : calcul d'itinéraire (client pour l'API de Valhalla)
+- **valh** : calcul d'itinéraire (client pour l'API de Valhalla)
 
-- **Distanamo** : cartogramme de distance
+- **distanamo** : cartogramme de distance
 
-- **Mapsf** : cartographie
+- **mapsf** : cartographie
 
 :::{.center}
 ![](./images/ex-multipackage-r.png){.w500}
@@ -234,8 +248,11 @@ Utilisée pour l'**enseignement** et l'**apprentissage** de la cartographie, pri
 
 - Et bien sûr, **des outils en cours de développement au sein de projets de recherche** 🕵️
 
+:::{.center}
+![](./images/image618.png){.w700}
+:::
 
-## Formations
+## Initiatives pour la diffusion des connaissances
 
 Formation à la science ouverte et aux bonnes pratiques de la recherche reproductible
 
@@ -247,17 +264,38 @@ Formation à la science ouverte et aux bonnes pratiques de la recherche reproduc
 ![](./images/soshs-neon.jpg){.w600}
 :::
 
-## Formations
 
-- Formation aux outils RIATE :
-  - R 
+## Initiatives pour la diffusion des connaissances
+
+*Un rôle d'organisation dans différentes initiatives*
+
+:::{.medium-small}
+
+- **RZine** ([https://rzine.fr/](https://rzine.fr/)) <!-- (publications en accès libre, soumises à une évaluation ouverte par les pairs) -->
+
+- **ElementR** ([https://elementr.cnrs.fr/](https://elementr.cnrs.fr/)) <!--  (groupe pour l’apprentissage et la montée en compétence collective dans la pratique du traitement de l’information géo. avec R) -->
+
+- Mise à disposition de supports complets sous licence libre (CC-BY-SA)
+  - Géomatique et cartographie avec R ([https://rgeocarto.github.io/](https://rgeocarto.github.io/))
+  - Théorie cartographie thématique + mise en pratique avec Magrit ([https://magrit-formation.github.io/](https://magrit-formation.github.io/))
   - (Géo)Visualisation en JavaScript
-  - Magrit
 
-- **Contextes variés** : écoles doctorales, formations internes aux laboratoires, réseaux métier, etc.
-  (+ activité d'enseignement universitaire pour certains membres)
+:::
 
-- Diffusion du code permettant de produire les supports sous licence CC-BY-SA
+:::{.center}
+![](./images/initiatives-diffusion.png){.w600}
+:::
+
+## Initiatives pour la diffusion des connaissances
+
+*Une reconnaissance nationale et internationale*
+
+<br />
+
+- Implication dans des réseaux métiers (MATE-SHS, MAGIS, etc.)
+
+- Solicitations pour intervenir dans des écoles thématiques (Bénin, Tunisie, Sénégal, Cambodge, etc.)
+
 
 ## Quel état de la diffusion réalisée par le RIATE ?
 
