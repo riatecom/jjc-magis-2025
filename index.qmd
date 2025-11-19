@@ -1,9 +1,10 @@
 ---
 title: "Diffusion de méthodes et outils grâce à la science ouverte"
 author:
-  name: "Matthieu Viry (CNRS - UAR 2414 RIATE)"
+  name: "<br />Matthieu Viry (CNRS - UAR 2414 RIATE)"
   email: "matthieu.viry@cnrs.fr"
 subtitle: "26 Nov. 2025 - Journées Jeunes Chercheur·es du GdR MAGIS"
+institute: "<br /><br /><img src='images/logos-footer.png' width='475' />"
 format:
   revealjs:
     theme: simple
@@ -11,9 +12,23 @@ format:
     logo: images/logos-footer.png
     width: 1150
     height: 740
+title-slide-attributes:
+  data-background-color: "#ffffff"
 execute:
   cache: true
 css: ['static/style.css']
+include-after: |
+  <script type="text/javascript">
+    const fun = (event) => {
+      if (event.indexh === 0) {
+        document.querySelector("div.has-logo > img.slide-logo").style.display = "none";
+      } else {
+        document.querySelector("div.has-logo > img.slide-logo").style.display = null;
+      }
+    };
+    Reveal.on('ready', fun);
+    Reveal.addEventListener('slidechanged', fun);
+  </script>
 prefer-html: true
 lang: fr
 ---
@@ -24,9 +39,9 @@ lang: fr
 ![](./images/riate-cartouche_baseline_red.jpg){.w300}
 :::
 
-Une petite équipe :
+Une petite équipe : <!-- 👨‍🏫🚴‍♂️🧗‍♂️🥷👩‍🚀🏃🏃🕵️‍♂️ -->
 
-- 1 directeur (PR Univ. Paris Cité)
+- 1 directeur (PR Univ. Paris Cité) 
 
 - 5 ingénieur·es permanent·es (CNRS et Univ. Paris Cité)
 
@@ -96,6 +111,16 @@ Mise en œuvre des méthodes de la recherche reproductible :
 
 - **Partage des données** (dépôts de données et des codes, licences ouvertes, etc.)
 
+## Projets de recherche : Méthodes pour une production scientifique ouverte
+
+:::{.center}
+
+![](./images/pipeline_viz_network_updating.png){.w700 .bordered}
+
+<small>Formalisation de la chaîne de traitement reproductible avec<br/>`{targets}`</small>
+
+:::
+
 
 ## Projets de recherche : Diffusion des résultats
 
@@ -148,9 +173,10 @@ Mise en œuvre des méthodes de la recherche reproductible :
 
 **_Riatelab_** : l'activité de développement d'outils open source du RIATE
 
+:::{.medium-small}
+
 <br />
 
-:::{.medium-small}
 Des développements guidés par :
 
 - la volonté de diffusion des méthodes de cartographie utilisées par le RIATE
@@ -164,6 +190,10 @@ Mise en œuvres **des bonnes pratiques de développement logiciel** (*versioning
 
 Inscription dans la **dynamique de valorisation des logiciels produits par/pour des organismes publics**
 (code.gouv.fr, SILL, Catalogue des logiciels libres de la recherche académique, etc.)
+
+<br />
+
+➟ Plus de 20 projets
 
 :::
 
@@ -201,8 +231,12 @@ Exemple combinant plusieurs packages R développés par le RIATE
 
 - **mapsf** : cartographie
 
+<!-- <img src="./images/arrow.svg" alt="flèche" style="position: absolute;right: 30px; top: 150px; width: 90px;" /> -->
+
 :::{.center}
-![](./images/ex-multipackage-r.png){.w500}
+
+![](./images/ex-multipackage-r.png){.w600}
+
 :::
 
 ## Développement d'outils : bibliothèques JavaScript
@@ -325,4 +359,19 @@ Bénéfices du choix des **logiciels libres** :
 
 ## 
 
-Merci !
+::::{.center}
+
+### Merci !
+
+:::{.left}
+
+<br /><br />
+
+Nous retrouver 🙋
+
+- **UAR RIATE** - [https://riate.cnrs.fr](https://riate.cnrs.fr) / [riate@cnrs.fr](mailto:riate@cnrs.fr)
+- **Principaux dev. open source du RIATE** - [https://github.com/riatelab](https://github.com/riatelab)
+- Matthieu Viry - [matthieu.viry@cnrs.fr](mailto:matthieu.viry@cnrs.fr)
+
+:::
+::::
