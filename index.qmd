@@ -39,7 +39,7 @@ lang: fr
 ![](./images/riate-cartouche_baseline_red.jpg){.w300}
 :::
 
-Une petite équipe : <!-- 👨‍🏫🚴‍♂️🧗‍♂️🥷👩‍🚀🏃🏃🕵️‍♂️ -->
+Une petite équipe :
 
 - 1 directeur (PR Univ. Paris Cité) 
 
@@ -49,27 +49,42 @@ Une petite équipe : <!-- 👨‍🏫🚴‍♂️🧗‍♂️🥷👩‍🚀�
 
 <br />
 
-Une **_Unité d'Appui et de Recherche_**
+Une **_Unité d'Appui et de Recherche_** [(dont le nom a évolué en 2024)]{.fragment}
 
+:::{.fragment}
+<img src="images/riate-change-name.png" alt="Changement de nom du RIATE" style="position: absolute; bottom: 10px; width: 1050px; border: 2px solid #ccc; box-shadow: 2px 2px 6px rgba(0,0,0,0.1);"/>
+:::
 
-## Le RIATE en quelques dates
+<!-- ## Le RIATE en quelques dates
 
+:::{.fragment}
 - Unité **créée en 2002** sous la cotutelle du **CNRS**,
   de la Délégation à l’Aménagement du Territoire et l’Action Régionale (**DATAR**) et de l’**Université Paris 7 - Denis Diderot**
+:::
 
+:::{.fragment}
 - Initialement un **rôle de coordination pour le lancement des projets de recherche du programme ESPON**
+:::
 
-- **2019-2020** : retrait du CGET (ex-DATAR) des tutelles de l'unité, fin du rôle de Point de Contact National du programme ESPON
+:::{.fragment}
+- **2019-2020** : retrait du CGET (ex-DATAR) des tutelles, fin du rôle de Point de Contact National du programme ESPON
   et **recentrage des missions du RIATE vers la production et la diffusion de méthodes et d’outils en géographie quantitative**
+:::
 
+:::{.fragment}
 - **2024** : Renommage en **RIATE - Centre pour l’analyse spatiale et la géovisualisation**
+:::
+
+-->
 
 ## Objectifs du RIATE
 
 <br />
 
 :::{.center}
+
 __*Le RIATE, une UAR avec la transmission au cœur de ses missions*__
+
 :::
 
 <br />
@@ -90,26 +105,36 @@ Mission 3 : **Partenariats scientifiques**
 - **Participation à des projets de recherche** en mettant en œuvre des protocoles permettant la **reproductibilité** des recherches
   (c'est le cas sur l'ensemble des projets de recherche conduits par le RIATE)
 
-<br />
+<p class="small">&nbsp;</p>
 
 - **Développement et publication d’outils libres et open source** (l'intégralité des outils développés par le RIATE est
   diffusée sous licence libre — principalement licence MIT ou licence GPL v3)
 
-<br />
+<p class="small">&nbsp;</p>
 
-- **Initiatives en faveur de la diffusion de savoir-faire et de connaissances** (RZine, écoles thématiques, supports, tutoriels, etc.)
+- **Initiatives en faveur de la diffusion de savoir-faire et de connaissances** (RZine, écoles thématiques, publication de supports, etc.)
+
 
 ## Projets de recherche : Méthodes pour une production scientifique ouverte
 
+<br />
+
 Mise en œuvre des méthodes de la recherche reproductible :
 
-- **Gestion de versions** (Git, GitHub, GitLab, etc.)
+- **Gestion de versions** (Git, GitHub / GitLab, etc.)
 
 - **Automatisation des analyses** (scripts, notebooks, etc.)
 
 - **Documentation des analyses** (littératie des données, métadonnées, etc.)
 
 - **Partage des données** (dépôts de données et des codes, licences ouvertes, etc.)
+
+:::{.notes}
+
+Ou "culture des données"
+
+:::
+
 
 ## Projets de recherche : Méthodes pour une production scientifique ouverte
 
@@ -126,7 +151,7 @@ Mise en œuvre des méthodes de la recherche reproductible :
 
 :::: {.columns}
 
-::: {.column .center width="50%"}
+::: {.column .center .fragment width="50%"}
 
 ![](./images/image152.png)
 
@@ -135,7 +160,7 @@ Mise en œuvre des méthodes de la recherche reproductible :
 :::
 
 
-::: {.column .center width="50%"}
+::: {.column .center .fragment width="50%"}
 
 ![](./images/notebook.png){.bordered}
 
@@ -145,6 +170,16 @@ Mise en œuvre des méthodes de la recherche reproductible :
 
 ::::
 
+
+:::{.notes}
+
+Projet GRANULAR : Giving Rural Actors Novel data and re-Useable tools to Lead public Action in Rural areas
+(projet visant à donner aux acteurs ruraux des données originales et des outils réutilisables pour piloter l'action publique)
+
+Utilisation de techno comme quarto pour la production de documents dynamiques mêlant texte, code et visualisations
+comme sur le notebook ci-dessus.
+
+:::
 
 
 ## Projets de recherche : Diffusion des résultats
@@ -167,13 +202,21 @@ Mise en œuvre des méthodes de la recherche reproductible :
 
 :::
 
+:::{.notes}
+
+Projet visant à documenter la diffusion spatio-temporelle des locations de courte durée Airbnb dans la région parisienne.
+
+Poursuivit actuellement dans le cadre du projet Geoviz-LCD.
+
+:::
+
 ## Développement d'outils
 
 <br />
 
-**_Riatelab_** : l'activité de développement d'outils open source du RIATE
+**_Riatelab_** : l'activité de développement d'outils open source
 
-:::{.medium-small}
+:::{.medium}
 
 <br />
 
@@ -184,16 +227,36 @@ Des développements guidés par :
 
 <br />
 
-Mise en œuvre **des bonnes pratiques de développement logiciel** (*versioning*, tests, documentation, etc.)
-
-<br />
-
-Inscription dans la **dynamique de valorisation des logiciels produits par/pour des organismes publics**
-(code.gouv.fr, SILL, Catalogue des logiciels libres de la recherche académique, etc. - en cours 😅)
+Mise en œuvre **des bonnes pratiques de développement logiciel** (*versioning* et notes de release, tests, documentation, etc.)
 
 <br />
 
 *➟ Plus de 20 projets actuellement maintenus*
+
+:::
+
+## Développement d'outils
+
+<br />
+
+Inscription dans la **dynamique de valorisation des logiciels produits par/pour des organismes publics**
+(code.gouv.fr, SILL, Catalogue des logiciels libres de la recherche académique, etc. – en cours 😅)
+
+<br />
+
+:::{.center}
+![](./images/os-sh.png){.w700}
+:::
+
+:::{.fragment}
+
+<img src="images/pmpc-logo.jpg" style="position: absolute; bottom: 10px; left: 480px; width: 250px; border: 2px solid #ccc; box-shadow: 2px 2px 6px rgba(0,0,0,0.1);"/>
+
+:::
+
+:::{.notes}
+
+Le COSO (comité pour la science ouverte) assure la mise en œuvre de la politique nationale de science ouverte.
 
 :::
 
@@ -204,10 +267,6 @@ Inscription dans la **dynamique de valorisation des logiciels produits par/pour 
 :::
 
 ## Développement d'outils : packages R
-
-<br />
-
-- Des packages couvrant une **large variété de sujets**
 
 <br />
 
@@ -247,7 +306,7 @@ Exemple combinant plusieurs packages R développés par le RIATE
 
 ## Développement d'outils : bibliothèques JavaScript
 
-- Bibliothèques publiées sur npmjs.com (+ code source sur GitHub)
+- Bibliothèques publiées sur *npm* (+ code source sur GitHub)
 
 - De nombreux notebooks et exemples d'utilisation sur la plateforme [Observable](https://observablehq.com/)
 
@@ -288,32 +347,45 @@ Utilisée pour l'**enseignement** et l'**apprentissage** de la cartographie, pri
 
 ## Initiatives pour la diffusion des connaissances
 
-*Un rôle d'organisation dans différentes initiatives*
+*Un rôle moteur dans différentes initiatives*
 
-:::{.medium-small}
+:::{.medium}
 
-- **RZine** ([https://rzine.fr/](https://rzine.fr/)) <!-- (publications en accès libre, soumises à une évaluation ouverte par les pairs) -->
+- **RZine** ([https://rzine.fr/](https://rzine.fr/)) 
 
-- **ElementR** ([https://elementr.cnrs.fr/](https://elementr.cnrs.fr/)) <!--  (groupe pour l’apprentissage et la montée en compétence collective dans la pratique du traitement de l’information géo. avec R) -->
+- **ElementR** ([https://elementr.cnrs.fr/](https://elementr.cnrs.fr/))
 
-- Mise à disposition de supports complets sous licence libre (CC-BY-SA)
-  - Géomatique et cartographie avec R ([https://rgeocarto.github.io/](https://rgeocarto.github.io/))
-  - Théorie cartographie thématique + mise en pratique avec Magrit ([https://magrit-formation.github.io/](https://magrit-formation.github.io/))
-  - (Géo)Visualisation en JavaScript
+- **Séminaire RUSS** (R à l'usage des sciences sociales)
+
+- Mise à disposition de supports sous licence libre (CC-BY-SA)
+  ([Géomatique et cartographie avec R](https://rgeocarto.github.io/), [Théorie cartographie thématique + Magrit](https://magrit-formation.github.io/), (Géo)Visualisation en JavaScript, etc.)
 
 :::
 
 :::{.center}
 ![](./images/initiatives-diffusion.png){.w600}
+
+<img src="images/Capture2_poster_Russ_10ans.png" style="position: absolute; bottom: -40px; left: 0px; height: 350px; border: 2px solid #ccc; box-shadow: 2px 2px 6px rgba(0,0,0,0.1);"/>
+:::
+
+
+:::{.notes}
+
+RZine : des publications méthodologiques pour les SHS avec l'objectif est de présenter des méthodes de collecte,
+de traitement, d’analyse ou de représentation de données, mises en application avec le langage R.
+Publications en accès libre, soumises à une évaluation ouverte par les pairs, sous forme d'article exécutables (notebooks).
+
+ElementR : groupe pour l’apprentissage et la montée en compétence collective dans la pratique du traitement de l’information géo. avec R
+
 :::
 
 ## Initiatives pour la diffusion des connaissances
 
-Formation à la science ouverte et aux bonnes pratiques de la recherche reproductible
+*Formation à la science ouverte et aux bonnes pratiques de la recherche reproductible*
 
-- École thématique [SIGR (Sciences de l'information géographique reproductibles)](https://sigr2020.sciencesconf.org/index.html) - 2023
+- École thématique [**SIGR** (Sciences de l'information géographique reproductibles)](https://sigr2020.sciencesconf.org/index.html) - **2023**
 
-- École thématique [SO-SHS (Sciences ouvertes pour les SHS : scripts, codes et logiciels)](https://so-shs.gitpages.huma-num.fr/) - 2025
+- École thématique [**SO-SHS** (Sciences ouvertes pour les SHS : scripts, codes et logiciels)](https://so-shs.gitpages.huma-num.fr/) - **2025**
 
 :::{.center}
 ![](./images/soshs-neon.jpg){.w600}
@@ -322,13 +394,15 @@ Formation à la science ouverte et aux bonnes pratiques de la recherche reproduc
 
 ## Initiatives pour la diffusion des connaissances
 
-*Une reconnaissance nationale et internationale*
+*Une implication nationale et internationale*
 
 <br />
 
-- Implication dans des réseaux métiers (MATE-SHS, MAGIS, etc.), semaines DATA-SHS, etc.
+- Implication dans des réseaux métiers (MAGIS, COSO, MATE-SHS, etc.), participation semaines DATA-SHS, etc.
 
-- Solicitations pour intervenir dans des écoles thématiques (Bénin, Tunisie, Sénégal, Cambodge, etc.)
+<br />
+
+- Solicitations pour intervenir dans des écoles thématiques (Bénin, Cambodge, Sénégal, Tunisie, etc.)
 
 
 ## Quel état de la diffusion réalisée par le RIATE ?
@@ -359,21 +433,24 @@ Bénéfices du choix des **logiciels libres** :
 
 ## 
 
-::::{.center}
+:::::{.center}
 
 ### Merci !
 
-:::{.left}
+::::{.left}
 
 <br /><br />
 
-Nous retrouver 🙋
+Nous retrouver 👋
 
 - **UAR RIATE** - [https://riate.cnrs.fr](https://riate.cnrs.fr) / [riate@cnrs.fr](mailto:riate@cnrs.fr)
-- **Principaux dev. open source du RIATE** - [https://github.com/riatelab](https://github.com/riatelab)
-- Matthieu Viry - [matthieu.viry@cnrs.fr](mailto:matthieu.viry@cnrs.fr)
 
-<small>Présentation disponible sur <a href="https://riatecom.github.io/jjc-magis-2025/" target="_blank">https://riatecom.github.io/jjc-magis-2025/</a></small>
+- **Principaux dev. open source** - [https://github.com/riatelab](https://github.com/riatelab)
 
+:::{.medium-small}
+
+Présentation disponible sur <a href="https://riatecom.github.io/jjc-magis-2025/" target="_blank">https://riatecom.github.io/jjc-magis-2025/</a>
 :::
+
 ::::
+:::::
