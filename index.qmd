@@ -373,5 +373,7 @@ Nous retrouver 🙋
 - **Principaux dev. open source du RIATE** - [https://github.com/riatelab](https://github.com/riatelab)
 - Matthieu Viry - [matthieu.viry@cnrs.fr](mailto:matthieu.viry@cnrs.fr)
 
+<small>Présentation disponible sur <a href="https://riatecom.github.io/jjc-magis-2025/" target="_blank">https://riatecom.github.io/jjc-magis-2025/</a></small>
+
 :::
 ::::
