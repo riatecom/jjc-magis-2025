@@ -92,12 +92,12 @@ Mission 3 : **Partenariats scientifiques**
 
 <br />
 
-- **Développement et diffusion d’outils libres et open source** (l'intégralité des outils développés par le RIATE est
+- **Développement et publication d’outils libres et open source** (l'intégralité des outils développés par le RIATE est
   diffusée sous licence libre — principalement licence MIT ou licence GPL v3)
 
 <br />
 
-- **Diffusion de savoir-faire et de connaissances** (supports de formation, tutoriels, etc.)
+- **Initiatives en faveur de la diffusion de savoir-faire et de connaissances** (RZine, écoles thématiques, supports, tutoriels, etc.)
 
 ## Projets de recherche : Méthodes pour une production scientifique ouverte
 
@@ -184,16 +184,16 @@ Des développements guidés par :
 
 <br />
 
-Mise en œuvres **des bonnes pratiques de développement logiciel** (*versioning*, tests, documentation, etc.)
+Mise en œuvre **des bonnes pratiques de développement logiciel** (*versioning*, tests, documentation, etc.)
 
 <br />
 
 Inscription dans la **dynamique de valorisation des logiciels produits par/pour des organismes publics**
-(code.gouv.fr, SILL, Catalogue des logiciels libres de la recherche académique, etc.)
+(code.gouv.fr, SILL, Catalogue des logiciels libres de la recherche académique, etc. - en cours 😅)
 
 <br />
 
-➟ Plus de 20 projets
+*➟ Plus de 20 projets actuellement maintenus*
 
 :::
 
@@ -261,7 +261,7 @@ Exemple combinant plusieurs packages R développés par le RIATE
 ![](./images/magrit-cartouche_baseline_black.png){.w300}
 :::
 
-**Application Web de cartographie thématique**, développée au RIATE **depuis 2017** (le projet open source avec la plus
+**Application Web de cartographie thématique**, développée **depuis 2017** (le projet open source avec la plus
 longue durée de vie au RIATE)
 
 Utilisée pour l'**enseignement** et l'**apprentissage** de la cartographie, principalement à l'université
@@ -278,26 +278,13 @@ Utilisée pour l'**enseignement** et l'**apprentissage** de la cartographie, pri
 
 - Plugin QGIS, bibliothèques Rust ou Python, etc.
 
-- Contribution à des projets open source externes.
+- Contribution à des projets open source externes
 
 - Et bien sûr, **des outils en cours de développement au sein de projets de recherche** 🕵️
 
 :::{.center}
 ![](./images/image618.png){.w700}
 :::
-
-## Initiatives pour la diffusion des connaissances
-
-Formation à la science ouverte et aux bonnes pratiques de la recherche reproductible
-
-- École thématique [SIGR (Sciences de l'information géographique reproductibles)](https://sigr2020.sciencesconf.org/index.html) - 2023
-
-- École thématique [SO-SHS (Sciences ouvertes pour les SHS : scripts, codes et logiciels)](https://so-shs.gitpages.huma-num.fr/) - 2025
-
-:::{.center}
-![](./images/soshs-neon.jpg){.w600}
-:::
-
 
 ## Initiatives pour la diffusion des connaissances
 
@@ -322,11 +309,24 @@ Formation à la science ouverte et aux bonnes pratiques de la recherche reproduc
 
 ## Initiatives pour la diffusion des connaissances
 
+Formation à la science ouverte et aux bonnes pratiques de la recherche reproductible
+
+- École thématique [SIGR (Sciences de l'information géographique reproductibles)](https://sigr2020.sciencesconf.org/index.html) - 2023
+
+- École thématique [SO-SHS (Sciences ouvertes pour les SHS : scripts, codes et logiciels)](https://so-shs.gitpages.huma-num.fr/) - 2025
+
+:::{.center}
+![](./images/soshs-neon.jpg){.w600}
+:::
+
+
+## Initiatives pour la diffusion des connaissances
+
 *Une reconnaissance nationale et internationale*
 
 <br />
 
-- Implication dans des réseaux métiers (MATE-SHS, MAGIS, etc.)
+- Implication dans des réseaux métiers (MATE-SHS, MAGIS, etc.), semaines DATA-SHS, etc.
 
 - Solicitations pour intervenir dans des écoles thématiques (Bénin, Tunisie, Sénégal, Cambodge, etc.)
 
