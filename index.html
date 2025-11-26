@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/tabby.min.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.31">
+
+  <meta name="author" content=" Matthieu Viry (CNRS - UAR 2414 RIATE)">
+  <title>Diffusion de méthodes et outils grâce à la science ouverte</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-2c1b5f745a11cfad616ebade4a4a7d24.css">
+  <link rel="stylesheet" href="static/style.css">
+  <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-color="#ffffff" class="quarto-title-block center">
+  <h1 class="title">Diffusion de méthodes et outils grâce à la science ouverte</h1>
+  <p class="subtitle">26 Nov.&nbsp;2025 - Journées Jeunes Chercheur·es du GdR MAGIS</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+<br>Matthieu Viry (CNRS - UAR 2414 RIATE) 
+</div>
+<div class="quarto-title-author-email">
+<a href="mailto:matthieu.viry@cnrs.fr">matthieu.viry@cnrs.fr</a>
+</div>
+        <p class="quarto-title-affiliation">
+            <br><br><img src="images/logos-footer.png" width="475">
+          </p>
+    </div>
+</div>
+
+</section>
+<section id="présentation-rapide-du-riate" class="slide level2">
+<h2>Présentation rapide du RIATE 🎯</h2>
+<div class="center">
+<p><img data-src="./images/riate-cartouche_baseline_red.jpg" class="w300"></p>
+</div>
+<p>Une petite équipe :</p>
+<ul>
+<li><p>1 directeur (PR Univ. Paris Cité)</p></li>
+<li><p>5 ingénieur·es permanent·es (CNRS et Univ. Paris Cité)</p></li>
+<li><p>2 ingénieurs en CDD (+ stagiaires)</p></li>
+</ul>
+<p><br></p>
+<p>Une <strong><em>Unité d’Appui et de Recherche</em></strong> <span class="fragment">(dont le nom a évolué en 2024)</span></p>
+<div class="fragment">
+<p><img src="images/riate-change-name.png" alt="Changement de nom du RIATE" style="position: absolute; bottom: 10px; width: 1050px; border: 2px solid #ccc; box-shadow: 2px 2px 6px rgba(0,0,0,0.1);"></p>
+</div>
+<!-- ## Le RIATE en quelques dates
+
+:::{.fragment}
+- Unité **créée en 2002** sous la cotutelle du **CNRS**,
+  de la Délégation à l’Aménagement du Territoire et l’Action Régionale (**DATAR**) et de l’**Université Paris 7 - Denis Diderot**
+:::
+
+:::{.fragment}
+- Initialement un **rôle de coordination pour le lancement des projets de recherche du programme ESPON**
+:::
+
+:::{.fragment}
+- **2019-2020** : retrait du CGET (ex-DATAR) des tutelles, fin du rôle de Point de Contact National du programme ESPON
+  et **recentrage des missions du RIATE vers la production et la diffusion de méthodes et d’outils en géographie quantitative**
+:::
+
+:::{.fragment}
+- **2024** : Renommage en **RIATE - Centre pour l’analyse spatiale et la géovisualisation**
+:::
+
+-->
+</section>
+<section id="objectifs-du-riate" class="slide level2">
+<h2>Objectifs du RIATE</h2>
+<p><br></p>
+<div class="center">
+<p><strong><em>Le RIATE, une UAR avec la transmission au cœur de ses missions</em></strong></p>
+</div>
+<p><br></p>
+<p>Mission 1 : <strong>Développement de méthodes et d’outils en géographie quantitative</strong></p>
+<p><br></p>
+<p>Mission 2 : <strong>Diffusion et partage des savoir-faire et des connaissances</strong></p>
+<p><br></p>
+<p>Mission 3 : <strong>Partenariats scientifiques</strong></p>
+</section>
+<section id="la-science-ouverte-au-riate" class="slide level2">
+<h2>La science ouverte au RIATE</h2>
+<ul>
+<li><strong>Participation à des projets de recherche</strong> en mettant en œuvre des protocoles permettant la <strong>reproductibilité</strong> des recherches (c’est le cas sur l’ensemble des projets de recherche conduits par le RIATE)</li>
+</ul>
+<p class="small">
+&nbsp;
+</p>
+<ul>
+<li><strong>Développement et publication d’outils libres et open source</strong> (l’intégralité des outils développés par le RIATE est diffusée sous licence libre — principalement licence MIT ou licence GPL v3)</li>
+</ul>
+<p class="small">
+&nbsp;
+</p>
+<ul>
+<li><strong>Initiatives en faveur de la diffusion de savoir-faire et de connaissances</strong> (RZine, écoles thématiques, publication de supports, etc.)</li>
+</ul>
+</section>
+<section id="projets-de-recherche-méthodes-pour-une-production-scientifique-ouverte" class="slide level2">
+<h2>Projets de recherche : Méthodes pour une production scientifique ouverte</h2>
+<p><br></p>
+<p>Mise en œuvre des méthodes de la recherche reproductible :</p>
+<ul>
+<li><p><strong>Gestion de versions</strong> (Git, GitHub / GitLab, etc.)</p></li>
+<li><p><strong>Automatisation des analyses</strong> (scripts, notebooks, etc.)</p></li>
+<li><p><strong>Documentation des analyses</strong> (littératie des données, métadonnées, etc.)</p></li>
+<li><p><strong>Partage des données</strong> (dépôts de données et des codes, licences ouvertes, etc.)</p></li>
+</ul>
+<aside class="notes">
+<p>Ou “culture des données”</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="projets-de-recherche-méthodes-pour-une-production-scientifique-ouverte-1" class="slide level2">
+<h2>Projets de recherche : Méthodes pour une production scientifique ouverte</h2>
+<div class="center">
+<p><img data-src="./images/pipeline_viz_network_updating.png" class="w700 bordered"></p>
+<p><small>Formalisation de la chaîne de traitement reproductible avec<br><code>{targets}</code></small></p>
+</div>
+</section>
+<section id="projets-de-recherche-diffusion-des-résultats" class="slide level2">
+<h2>Projets de recherche : Diffusion des résultats</h2>
+<div class="columns">
+<div class="column center fragment" style="width:50%;">
+<p><img data-src="./images/image152.png"></p>
+<p><small>Publication de jeux de données et codes sur Zenodo</small></p>
+</div><div class="column center fragment" style="width:50%;">
+<p><img data-src="./images/notebook.png" class="bordered"></p>
+<p><small>Exemple de notebook accompagnant un jeu de données</small></p>
+</div></div>
+<aside class="notes">
+<p>Projet GRANULAR : Giving Rural Actors Novel data and re-Useable tools to Lead public Action in Rural areas (projet visant à donner aux acteurs ruraux des données originales et des outils réutilisables pour piloter l’action publique)</p>
+<p>Utilisation de techno comme quarto pour la production de documents dynamiques mêlant texte, code et visualisations comme sur le notebook ci-dessus.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="projets-de-recherche-diffusion-des-résultats-1" class="slide level2">
+<h2>Projets de recherche : Diffusion des résultats</h2>
+<div class="center">
+<p><img data-src="./images/datapaper2.png"></p>
+<p><small><em>Data paper</em></small></p>
+</div>
+</section>
+<section id="projets-de-recherche-diffusion-des-résultats-2" class="slide level2">
+<h2>Projets de recherche : Diffusion des résultats</h2>
+<div class="center">
+<p><img data-src="./images/site-airbnb.png" class="bordered w800"></p>
+<p><small>Au-delà des publications scientifiques, via sites Web dédiés par exemple</small></p>
+</div>
+<aside class="notes">
+<p>Projet visant à documenter la diffusion spatio-temporelle des locations de courte durée Airbnb dans la région parisienne.</p>
+<p>Poursuivit actuellement dans le cadre du projet Geoviz-LCD.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="développement-doutils" class="slide level2">
+<h2>Développement d’outils</h2>
+<p><br></p>
+<p><strong><em>Riatelab</em></strong> : l’activité de développement d’outils open source</p>
+<div class="medium">
+<p><br></p>
+<p>Des développements guidés par :</p>
+<ul>
+<li>la volonté de diffusion des méthodes de cartographie utilisées par le RIATE</li>
+<li>les besoins des projets de recherche auxquels participent des membres du RIATE</li>
+</ul>
+<p><br></p>
+<p>Mise en œuvre <strong>des bonnes pratiques de développement logiciel</strong> (<em>versioning</em> et notes de release, tests, documentation, etc.)</p>
+<p><br></p>
+<p><em>➟ Plus de 20 projets actuellement maintenus</em></p>
+</div>
+</section>
+<section id="développement-doutils-1" class="slide level2">
+<h2>Développement d’outils</h2>
+<p><br></p>
+<p>Inscription dans la <strong>dynamique de valorisation des logiciels produits par/pour des organismes publics</strong> (code.gouv.fr, SILL, Catalogue des logiciels libres de la recherche académique, etc. – en cours 😅)</p>
+<p><br></p>
+<div class="center">
+<p><img data-src="./images/os-sh.png" class="w700"></p>
+</div>
+<div class="fragment">
+<p><img src="images/pmpc-logo.jpg" style="position: absolute; bottom: 10px; left: 480px; width: 250px; border: 2px solid #ccc; box-shadow: 2px 2px 6px rgba(0,0,0,0.1);"></p>
+</div>
+<aside class="notes">
+<p>Le COSO (comité pour la science ouverte) assure la mise en œuvre de la politique nationale de science ouverte.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="développement-doutils-packages-r" class="slide level2">
+<h2>Développement d’outils : packages R</h2>
+<div class="center">
+<p><img data-src="./images/logos-r.png" class="w900"></p>
+</div>
+</section>
+<section id="développement-doutils-packages-r-1" class="slide level2">
+<h2>Développement d’outils : packages R</h2>
+<p><br></p>
+<ul>
+<li><strong>Publiés sur le CRAN et/ou Runiverse</strong> (+ code source sur GitHub)</li>
+</ul>
+<p><br></p>
+<ul>
+<li>Des “vignettes” couvrant l’usage des packages, mais aussi des tâches préalables parfois bloquantes pour certains utilisateurs (installation de moteur de recherche d’itinéraire comme OSRM ou Valhalla, etc.)</li>
+</ul>
+</section>
+<section id="développement-doutils-packages-r-2" class="slide level2">
+<h2>Développement d’outils : packages R</h2>
+<p>Exemple combinant plusieurs packages R développés par le RIATE</p>
+<ul>
+<li><p><strong>maposm</strong> : récupération de couches extraites d’OpenStreetMap</p></li>
+<li><p><strong>valh</strong> : calcul d’itinéraire (client pour l’API de Valhalla)</p></li>
+<li><p><strong>distanamo</strong> : cartogramme de distance</p></li>
+<li><p><strong>mapsf</strong> : cartographie</p></li>
+</ul>
+<!-- <img src="./images/arrow.svg" alt="flèche" style="position: absolute;right: 30px; top: 150px; width: 90px;" /> -->
+<div class="center">
+<p><img data-src="./images/ex-multipackage-r.png" class="w600"></p>
+</div>
+</section>
+<section id="développement-doutils-bibliothèques-javascript" class="slide level2">
+<h2>Développement d’outils : bibliothèques JavaScript</h2>
+<div class="center">
+<p><img data-src="./images/logos-js.png" class="w600"></p>
+</div>
+</section>
+<section id="développement-doutils-bibliothèques-javascript-1" class="slide level2">
+<h2>Développement d’outils : bibliothèques JavaScript</h2>
+<ul>
+<li><p>Bibliothèques publiées sur <em>npm</em> (+ code source sur GitHub)</p></li>
+<li><p>De nombreux notebooks et exemples d’utilisation sur la plateforme <a href="https://observablehq.com/">Observable</a></p></li>
+</ul>
+<div class="center">
+<p><img data-src="./images/notebooks.png" class="w800"></p>
+</div>
+</section>
+<section id="développement-doutils-magrit" class="slide level2">
+<h2>Développement d’outils : Magrit</h2>
+<div class="center">
+<p><img data-src="./images/magrit-cartouche_baseline_black.png" class="w300"></p>
+</div>
+<p><strong>Application Web de cartographie thématique</strong>, développée <strong>depuis 2017</strong> (le projet open source avec la plus longue durée de vie au RIATE)</p>
+<p>Utilisée pour l’<strong>enseignement</strong> et l’<strong>apprentissage</strong> de la cartographie, principalement à l’université</p>
+</section>
+<section id="développement-doutils-magrit-1" class="slide level2">
+<h2>Développement d’outils : Magrit</h2>
+<div class="center">
+<p><img data-src="./images/magrit-maps.png" class="w1000"></p>
+</div>
+</section>
+<section id="développement-doutils-varia" class="slide level2">
+<h2>Développement d’outils : Varia</h2>
+<p><br></p>
+<ul>
+<li><p>Plugin QGIS, bibliothèques Rust ou Python, etc.</p></li>
+<li><p>Contribution à des projets open source externes</p></li>
+<li><p>Et bien sûr, <strong>des outils en cours de développement au sein de projets de recherche</strong> 🕵️</p></li>
+</ul>
+<div class="center">
+<p><img data-src="./images/image618.png" class="w700"></p>
+</div>
+</section>
+<section id="initiatives-pour-la-diffusion-des-connaissances" class="slide level2">
+<h2>Initiatives pour la diffusion des connaissances</h2>
+<p><em>Un rôle moteur dans différentes initiatives</em></p>
+<div class="medium">
+<ul>
+<li><p><strong>RZine</strong> (<a href="https://rzine.fr/">https://rzine.fr/</a>)</p></li>
+<li><p><strong>ElementR</strong> (<a href="https://elementr.cnrs.fr/">https://elementr.cnrs.fr/</a>)</p></li>
+<li><p><strong>Séminaire RUSS</strong> (R à l’usage des sciences sociales)</p></li>
+<li><p>Mise à disposition de supports sous licence libre (CC-BY-SA) (<a href="https://rgeocarto.github.io/">Géomatique et cartographie avec R</a>, <a href="https://magrit-formation.github.io/">Théorie cartographie thématique + Magrit</a>, (Géo)Visualisation en JavaScript, etc.)</p></li>
+</ul>
+</div>
+<div class="center">
+<p><img data-src="./images/initiatives-diffusion.png" class="w600"></p>
+<p><img src="images/Capture2_poster_Russ_10ans.png" style="position: absolute; bottom: -40px; left: 0px; height: 350px; border: 2px solid #ccc; box-shadow: 2px 2px 6px rgba(0,0,0,0.1);"></p>
+</div>
+<aside class="notes">
+<p>RZine : des publications méthodologiques pour les SHS avec l’objectif est de présenter des méthodes de collecte, de traitement, d’analyse ou de représentation de données, mises en application avec le langage R. Publications en accès libre, soumises à une évaluation ouverte par les pairs, sous forme d’article exécutables (notebooks).</p>
+<p>ElementR : groupe pour l’apprentissage et la montée en compétence collective dans la pratique du traitement de l’information géo. avec R</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="initiatives-pour-la-diffusion-des-connaissances-1" class="slide level2">
+<h2>Initiatives pour la diffusion des connaissances</h2>
+<p><em>Formation à la science ouverte et aux bonnes pratiques de la recherche reproductible</em></p>
+<ul>
+<li><p>École thématique <a href="https://sigr2020.sciencesconf.org/index.html"><strong>SIGR</strong> (Sciences de l’information géographique reproductibles)</a> - <strong>2023</strong></p></li>
+<li><p>École thématique <a href="https://so-shs.gitpages.huma-num.fr/"><strong>SO-SHS</strong> (Sciences ouvertes pour les SHS : scripts, codes et logiciels)</a> - <strong>2025</strong></p></li>
+</ul>
+<div class="center">
+<p><img data-src="./images/soshs-neon.jpg" class="w600"></p>
+</div>
+</section>
+<section id="initiatives-pour-la-diffusion-des-connaissances-2" class="slide level2">
+<h2>Initiatives pour la diffusion des connaissances</h2>
+<p><em>Une implication nationale et internationale</em></p>
+<p><br></p>
+<ul>
+<li>Implication dans des réseaux métiers (MAGIS, COSO, MATE-SHS, etc.), participation semaines DATA-SHS, etc.</li>
+</ul>
+<p><br></p>
+<ul>
+<li>Solicitations pour intervenir dans des écoles thématiques (Bénin, Cambodge, Sénégal, Tunisie, etc.)</li>
+</ul>
+</section>
+<section id="quel-état-de-la-diffusion-réalisée-par-le-riate" class="slide level2">
+<h2>Quel état de la diffusion réalisée par le RIATE ?</h2>
+<p>Bénéfices du choix de <strong>méthodes reproductibles</strong> :</p>
+<ul>
+<li><p>Des échanges facilités entre les chercheur·es et les ingénieur·es</p></li>
+<li><p>Des résultats faciles à diffuser et à réutiliser</p></li>
+<li><p>Une expertise reconnue en géographie quantitative et en conduite de projets</p></li>
+</ul>
+<div class="center">
+<p><img data-src="./images/RDM_KIT_life_cycle.png" class="w300"></p>
+</div>
+</section>
+<section id="quel-état-de-la-diffusion-réalisée-par-le-riate-1" class="slide level2">
+<h2>Quel état de la diffusion réalisée par le RIATE ?</h2>
+<p>Bénéfices du choix des <strong>logiciels libres</strong> :</p>
+<ul>
+<li><p>Une <strong>large diffusion des outils</strong> (communauté d’utilisateurs internationale), des retours d’expérience et des rapports de bugs facilités</p></li>
+<li><p>Des <strong>usages au-delà de la communauté <em>recherche</em></strong> (enseignement secondaire, collectivités territoriales, associations, hobbyistes, etc.)</p></li>
+</ul>
+<div class="center">
+<p><img data-src="./images/image438.png" class="w600"></p>
+</div>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<section id="merci" class="center">
+<h3>Merci !</h3>
+<div class="left">
+<p><br><br></p>
+<p>Nous retrouver 👋</p>
+<ul>
+<li><p><strong>UAR RIATE</strong> - <a href="https://riate.cnrs.fr">https://riate.cnrs.fr</a> / <a href="mailto:riate@cnrs.fr">riate@cnrs.fr</a></p></li>
+<li><p><strong>Principaux dev. open source</strong> - <a href="https://github.com/riatelab">https://github.com/riatelab</a></p></li>
+</ul>
+<div class="medium-small">
+<p>Présentation disponible sur <a href="https://riatecom.github.io/jjc-magis-2025/" target="_blank">https://riatecom.github.io/jjc-magis-2025/</a></p>
+</div>
+</div>
+</section>
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="images/logos-footer.png" class="slide-logo"></p>
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="index_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="index_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="index_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="index_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="index_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1150,
+
+        height: 740,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copié");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copié");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
+              }
+            }
+            return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    <script type="text/javascript">
+      const fun = (event) => {
+        if (event.indexh === 0) {
+          document.querySelector("div.has-logo > img.slide-logo").style.display = "none";
+        } else {
+          document.querySelector("div.has-logo > img.slide-logo").style.display = null;
+        }
+      };
+      Reveal.on('ready', fun);
+      Reveal.addEventListener('slidechanged', fun);
+    </script>
+    
+
+</body></html>
